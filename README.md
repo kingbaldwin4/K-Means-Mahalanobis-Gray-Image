@@ -23,6 +23,8 @@ NOT: Bu tarz algoritmalarda kullanılan görüntü ve girilecek küme sayısı �
 
 NOT 2: Ayrıca girilen küme sayısı da belirli değeri aşarsa yine iyi sonuçlar elde edilemeyebilir.
 
+NOT 3: Kümeler için gelecek varyans değerlerinin çok küçük olması, algoritmada istenmeyen sonuçlar doğurabileceğinden koduma varyans değerleri minimum 0.1 olacak şekilde bir if şartı ekledim.
+
 Bu yüzden örnek bir görüntüyü de kodumla beraber ekledim. Küme sayısını 3-4-5-6 gibi değerler girerek verimli sonuçlar alabilirsiniz.
 
 English:
@@ -37,7 +39,10 @@ Since Mahalanobis considers all pixels in the clusters, we need to have a cluste
 
 The termination of the algorithm depends not only on the centers of the clusters not changing but also on the variance values of the clusters not changing.
 
-NOTE: The image and the number of clusters entered are crucial in these types of algorithms. These algorithms may not perform well for every image.
-NOTE 2: Additionally, if the number of clusters entered exceeds a certain value, efficient results may not be obtained.
+NOTE: The image and the number of clusters entered are crucial in these types of algorithms. These algorithms may not perform well for every image.<
+
+NOTE 2: Additionally, if the number of clusters entered exceeds a certain value, efficient results may not be obtained.<
+
+NOTE 3: Since having very small variance values for the clusters can lead to undesirable results in the algorithm, I have added a conditional statement to ensure that the variance values in my code are a minimum of 0.1.
 
 Therefore, I also provided a sample image along with the code. You can enter values like 3, 4, 5, 6 for the number of clusters to obtain meaningful results.
